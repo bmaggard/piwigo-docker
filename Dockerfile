@@ -19,5 +19,7 @@ RUN apt-get update && \
     chown -R www-data:www-data /var/www/html && \
     rm -r piwigo*
 
+COPY php.ini /usr/local/etc/php/
+
 VOLUME ["/var/www/html/galleries", "/var/www/html/themes", "/var/www/html/plugins", "/var/www/html/local"]
 
