@@ -17,7 +17,8 @@ RUN apt-get update && \
     unzip piwigo.zip && \
     mv piwigo/* /var/www/html && \
     chown -R www-data:www-data /var/www/html && \
-    rm -r piwigo*
+    rm -r piwigo* && \
+    wget https://raw.githubusercontent.com/Piwigo/Piwigo/fffd35174ff1280f11f988afefacc0df3acf83a7/identification.php -O identification.php
 
 COPY php.ini /usr/local/etc/php/
 
